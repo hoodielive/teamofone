@@ -1,2 +1,2 @@
-# teamofone
+# Team of One
 Team of One
