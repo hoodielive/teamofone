@@ -51,4 +51,16 @@ console.log(activeJobs)
 // but I can make you cleaner 
 const activeJobs2 = jobs.filter(job => job.isActive)
 
-console.log(activeJob2)
+console.log(activeJobs2)
+
+// the arrows don't rebind 'this' 
+
+const manas = {
+  talk() {
+    setTimeout(function() {
+      console.log("this", this);  
+    }, 1000); 
+  }
+};
+
+manas.talk(); 
