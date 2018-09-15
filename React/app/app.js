@@ -64,3 +64,28 @@ const manas = {
 };
 
 manas.talk(); 
+
+const manas2 = {
+  talk() {
+    var self = this; 
+    setTimeout(function() {
+      console.log("self", self);  
+    }, 1000); 
+  }
+};
+
+manas2.talk(); 
+
+
+// you don't have to do the work around with self with arrow function
+
+const manas3 = {
+  talk() {
+    var self = this; 
+    setTimeout(() => {
+      console.log("this", this);  
+    }, 1000);
+  }
+};
+
+manas3.talk(); 
