@@ -6,11 +6,12 @@ class Counter extends Component {
     //imageUrl: "https://picsum.photos/200"
   };
 
+
   render() {
     return (
       <React.Fragment>
-        <span className="badge badge-primary">{this.formatCount()}</span>
-        <button>Increment</button>
+        <span style={ { fontSize: 30 }} className="badge badge-primary m-2">{this.formatCount()}</span>
+        <button className="btn btn-secondary btn-sm">Increment</button>
       </React.Fragment>
     );
   }
