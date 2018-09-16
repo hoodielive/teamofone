@@ -7,14 +7,12 @@ class Counter extends Component {
   };
 
 
-  render() {
-    // let classes = this.getBadgeClasses(); 
-    
-    renderTags() {
-      if (this.state.tags.length === 0) return <p>There are no tags</p>  
-        return <ul>{this.state.tags.map(tag => <li key={tag}>{ tag }</li>)}</ul>
-    }
+  renderTags() {
+    if (this.state.tags.length === 0) return <p>There are no tags</p>  
+      return <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
+  };
 
+  render() {
     return (
       <div>
         { this.renderTags() }
