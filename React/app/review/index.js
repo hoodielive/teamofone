@@ -1,5 +1,5 @@
 
-import { Teacher } from "./teacher";
+import  Teacher, { promote } from "./teacher";
 
 const teacher = new Teacher("Larry", "CS"); 
 
