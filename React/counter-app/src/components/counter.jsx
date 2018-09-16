@@ -12,10 +12,12 @@ class Counter extends Component {
       return <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
   };
 
+  
+  // true && 'Hi' will return string, so if condition is true render string
   render() {
     return (
       <div>
-        { this.state.tags.length === 0 && "Please create a new tag!"}
+        { this.state.tags.length === 0 && "Please create a new tag!"} 
         { this.renderTags() }
       </div>
     );
