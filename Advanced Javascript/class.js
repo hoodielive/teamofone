@@ -21,8 +21,8 @@ class Engineer extends Workers {
     this.experience = experience; 
   }
 
-  returnSomeMessage() {
-    console.log('You have experience', this.experience) 
+  returnSomeMessage(experience) {
+    console.log('You have experience', experience) 
   }
 }
 
@@ -30,7 +30,8 @@ class Engineer extends Workers {
 let worker1 = new Workers()
 
 worker1.getProfession('engineer')
-worker1.setID('1'); 
+worker1.setID(); 
 
 const engineer = new Engineer(); 
-engineer.returnSomeMessage(); 
+engineer.returnSomeMessage('in administration'); 
+
