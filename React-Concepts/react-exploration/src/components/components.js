@@ -1,19 +1,18 @@
-// components are function-like; they take arbitrary inputs called props (i.e. properties) 
+import React, { Component } from 'react'; 
 
-// example of a functional component (function) 
-function WhatsUp(props) {
-  return <h1> Howdy, {props.name} </h1> // returns a React element (we aren't dealing with the DOM) but the virtualDOM
+class TankTank extends React.Component {
+
+  render() {
+      return (
+           <div class="jumbotron jumbotron-fluid">
+              <div class="container">
+                <h1 class="display-4">Fluid jumbotron</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          </div>
+          </div>   
+    );
+  }
 }
 
-class WhatsItGoingToBe extends WhatsUp {
-  constructor(props) {
-    this.props = props;  
-  }
-  render() { 
-    return <h1> Howdy, {this.props.name} </h1>  
-  }
-}
 
-// objects are created from functions = objects lol 
-
-
+export default TankTank; 

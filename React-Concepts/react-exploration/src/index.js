@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import TankTank from './components/components.js'
+import 'bootstrap/dist/css/bootstrap.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+
+
+ReactDOM.render(<TankTank />, document.getElementById('root'));
