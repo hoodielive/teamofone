@@ -6,7 +6,7 @@ function multiplyBy2(inputNumber) { // put a function in global memory called mu
   const result = inputNumber * 2; 
   return result; 
 } 
-
+?
 const name = 'mordrid'; // then stores the string modrid in global memory which skips over the body of the func:
 
 /** 
@@ -28,6 +28,8 @@ const newOutput = multiplyBy2(10);
  * when you invoke a function, you create a new execution context comprising:
  * the thread of execution (we go through the code in the function line by line
  * a local memory ('Variable Environment') where anything defined in the function is stored
+ * when you call a function, you create a local execution context | local memory - because its 
+ * inside the body of the function going line by line 
 **/ 
 
-
+// undefined is a waiting value (placeholder) because nothing has been officially assigned yet
