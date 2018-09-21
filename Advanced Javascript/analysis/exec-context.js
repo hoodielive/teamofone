@@ -29,7 +29,10 @@ const newOutput = multiplyBy2(10);
  * the thread of execution (we go through the code in the function line by line
  * a local memory ('Variable Environment') where anything defined in the function is stored
  * when you call a function, you create a local execution context | local memory - because its 
- * inside the body of the function going line by line 
+ * inside the body of the function going line by line
+ * undefined is a waiting value (placeholder) because nothing has been officially assigned yet
+ * we keep track of the functions beings called in js with a Call Stack 
+ * one global exec context, multiple function contexts 
 **/ 
 
-// undefined is a waiting value (placeholder) because nothing has been officially assigned yet
+
