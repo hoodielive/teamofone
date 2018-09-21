@@ -6,7 +6,7 @@ function multiplyBy2(inputNumber) { // put a function in global memory called mu
   const result = inputNumber * 2; 
   return result; 
 } 
-?
+
 const name = 'mordrid'; // then stores the string modrid in global memory which skips over the body of the func:
 
 /** 
@@ -39,7 +39,8 @@ const newOutput = multiplyBy2(10);
 function copyArrayAndMultiplyBy2(array) { // 1. declare function 
   //  4. array will now be set to [1,2,3] so everywhere you see array it will be 1,2,3
   let output = []; // 5. output will now be set  
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) { // 5[i] the first time we hit the body of the 'for loop' 
+    // what is the value of i? don't generalize things i.e. then it loops through for loop! 
     output.push(array[i] * 2);  
   }
   return output; // 6
@@ -48,3 +49,4 @@ function copyArrayAndMultiplyBy2(array) { // 1. declare function
 const myArray = [1,2,3] // 2. declare const-var named myArray and assign it an array of values [1,2,3] 
 let result = copyArrayAndMultiplyBy2(myArray); // 3. declare var named copyArrayAndMultiplyBy2 and assign it
 // the output of invoking that function  - which creates a brand new execution context on the call stack
+
