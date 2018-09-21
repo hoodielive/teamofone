@@ -37,11 +37,12 @@ const newOutput = multiplyBy2(10);
 
 
 function copyArrayAndMultiplyBy2(array) { // 1. declare function 
-  let output = []; // 4  
+  //  4. array will now be set to [1,2,3] so everywhere you see array it will be 1,2,3
+  let output = []; // 5. output will now be set  
   for (let i = 0; i < array.length; i++) {
     output.push(array[i] * 2);  
   }
-  return output; 5 
+  return output; // 6
 }
 
 const myArray = [1,2,3] // 2. declare const-var named myArray and assign it an array of values [1,2,3] 
