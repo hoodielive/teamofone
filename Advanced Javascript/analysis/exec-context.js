@@ -46,4 +46,4 @@ function copyArrayAndMultiplyBy2(array) { // 1. declare function
 
 const myArray = [1,2,3] // 2. declare const-var named myArray and assign it an array of values [1,2,3] 
 let result = copyArrayAndMultiplyBy2(myArray); // 3. declare var named copyArrayAndMultiplyBy2 and assign it
-// the output of invoking that function 
+// the output of invoking that function  - which creates a brand new execution context on the call stack
