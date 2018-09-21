@@ -8,3 +8,14 @@
 Functional Programming core features:
   1. Pure functions (no side effects)
   2. Higher order functions - highly valuable tool 
+
+Pair Programming (answer these):
+  1. I know what a variable is
+  2. I've created a function before 
+  3. I've added a CSS style before
+  4. I have implemented a sort algorithm (bubble, merge, etc)
+  5. I can add a method to an object's prototype 
+  6. I understand the event loop in Javascript
+  7. I understand 'callback functions'
+  8. I've built a project in react and angular
+  9. I can handle collisions in hash tables
