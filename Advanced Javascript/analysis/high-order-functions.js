@@ -2,16 +2,16 @@
 function copyArrayAndManipulate(array, instructions) {
   // 1. the above declares a function named copyArrayAndManipulate and stores it in global memory 
   // 4. sets the value of array
-  // 5. sets the value of instructions 
+  // 5. sets the value of instructions by calling multiplyBy2 
   let output = [];  // 6. declares a variable called output 
   for (let i = 0; i < array.length; i++) { // 7. declares a variable called i and assign is a value of 0
     // 8. at the time of i is compared to the length of 1,2,3 -> i is at the 0th index with the value of 1 
     output.push(instructions(array[i])); // 9. index 0 value 1 is pushed into output and this loops til end
   }
-  return output; 
+  return output; // 10 returns value of output 
 }
 
-// 2. declares a function named multiplyBy2
+// 2. declares a function named multiplyBy2 and stores it into global memory 
 function multiplyBy2(input) {
   return input * 2; 
 }
