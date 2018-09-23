@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import ToolBar from '@material-ui/core/Toolbar';
+import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 
@@ -18,7 +18,6 @@ class Header extends Component {
     }
     render() {
         return (
-            <div>
                 <AppBar
                     position="fixed"
                     style={{
@@ -27,7 +26,7 @@ class Header extends Component {
                         padding: '10px 10px'
                     }}
                 >
-                <ToolBar>
+                <Toolbar>
                     <div className="header_logo">
                         <div className="font_righteous header_logo_venue">The Venue</div> 
                         <div className="header_logo_title">Actress Events</div> 
@@ -35,7 +34,7 @@ class Header extends Component {
                     <IconButton
                         aria-label="Menu"
                         color="inherit"
-                        onClick={()=> console.log('open')} 
+                        onClick={()=> this.toggleDrawer(true)} 
                     >
                         <MenuIcon/>
                     </IconButton>
@@ -43,9 +42,8 @@ class Header extends Component {
                         open={this.state.drawerOpen}
                         onClose={(value)=> this.toggleDrawer(value)}
                     />
-                </ToolBar>
+                </Toolbar>
                 </AppBar>
-            </div>
         );
     }
 }
