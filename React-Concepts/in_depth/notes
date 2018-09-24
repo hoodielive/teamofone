@@ -1,0 +1,21 @@
+Stages 
+
+Birth Phase 
+  1. Initialize/Construction 
+  2. getDefaultProps() or MyComponent.defaultProps (ES6 class)
+  3. getInitialState() or this.state = ... (ES6 Constructor)
+  4. componentWillMount()
+  5. render() 
+  6. Children intialization & life cycle kickoff 
+  7. componentDidMount() 
+
+- After the initialization of the component instance, we start moving through the birth phase of the 
+  React lifecycle
+
+- This phase deals with the 'initial configuration' our Component where we pass (props) that will define
+  the instance
+
+- We also configure the 'state' and get access to the initial UI display 
+
+- It also starts the mounting process 
+    
