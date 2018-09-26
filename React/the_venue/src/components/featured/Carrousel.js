@@ -47,11 +47,12 @@ const Carrousel = () => {
               height: `${window.innerHeight}px`
             }}
           >
-        </div>
+          </div>
         </div>
       </Slider>
     </div>
   );
 };
+
 
 export default Carrousel;
