@@ -1,0 +1,72 @@
+What is Node? 
+
+Platform built on Chrome's V8 engine that can be used out of browser to build tooling and network based applications. 
+
+Created by Ryan Dahl (currently at Google).
+
+Maintained by the Node.js Foundation.
+
+Open Source (good luck trying to contribute to it).
+
+Useb by everyone. 
+
+
+HTTP in Node 
+Node comees with a built in module for creating network based apps. 
+
+Just a Library, not a framework. 
+
+Good luck. 
+
+You still need to develop abstractions around the http module to build servers. 
+
+Do NOT USE THIS MODULE, use EXPRESS! 
+
+
+Node Server Frameworks 
+
+  - Connect (baseline framework) 
+  - Express (based on connet)
+  - Koa (from express creators)
+  - Hapi
+  - Sails (based on express)
+
+Why express? 
+ - The go to for creating API's with node
+ - Other frameworks are based off express
+ - Tons of plugins and integrations 
+
+ Features: 
+  - Declarative routing 
+    - Exact, pattern, glob, parameter matching 
+
+  - Middleware 
+    - Functions to run serially on your requests 
+
+  - Powerful response options 
+    - From JSON to static files 
+    - Stream
+    - Redirects 
+
+  - DB Agnostic 
+  
+  - Highly configurable 
+
+Getting started: 
+
+const express = require('express'); 
+
+const app = express() 
+
+app.get('/', (req, res) => {
+   res.json({ok: true}) 
+}); 
+
+app.listen(3000, () => {
+  console.log('http://localhost:3000')    
+})
+
+Routing with Express
+
+  - Flexible 
+
