@@ -1,0 +1,6 @@
+git stores the compressed data in a blob, along with metadata in a header: 
+  - the identifier blob 
+  - the size of the content 
+  - \0 delimiter 
+  - content 
+
