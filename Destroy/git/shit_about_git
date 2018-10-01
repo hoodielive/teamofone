@@ -4,3 +4,78 @@ git stores the compressed data in a blob, along with metadata in a header:
   - \0 delimiter 
   - content 
 
+  1. echo "Bye Bye World!" | git hash-object --stdin # Asking git for the SHA1 of contents  
+
+  Generate a sha1 of the content 
+
+  2. echo 'blob 14\0Bye,Bye World!' | openssl sha1
+
+# both will match [1 and 2] 
+
+# make sure you understand SHA - this blob gets stored in a directory called '.git/objects'
+
+  Don't believe me? tree -L 2 .git/ 
+
+  echo "bye!" | git hash-object -w --stdin # -w means write the hash-object
+
+# for cleaner output:
+  rm -rf .git/hooks lol 
+
+Git Tree
+
+a tree contains pointers (using SHA1)
+  - to blobs 
+  - to other trees 
+
+  and metadata:
+  - type of pointer (blob or tree)
+  - filename or directory name 
+  - mode (executable file, symbolic link,...)
+
+TREE
+  4ad20.. 
+  tree | size 
+  \0 
+  blob | 8ab68 | hello.txt
+  tree | a14ca | copies 
+
+Git doesn't store empty directories 
+
+tree -> tree -> blob -> blob 
+
+In Git identitical content is only stored once 
+
+All content gets a sha1 hash | the hash is stored as a key in an object called a blob lol - which tells git what
+content is which and where it is stored. This helps git save you a ton of space on your hard drive and its why 
+git checkouts are so fast. 
+
+Git objects are compressed 
+
+As files change, their contents remain mostly similar.
+
+Git optimizes for this by compressing these files together, into a Packfile
+
+The Packfile stores the object, and deltas, or the differences between one version of the file and the next
+
+Packfiles are generates when:
+ 1. You have too many objects.
+ 2. During gc.
+ 3. During pushing to remote. 
+
+ A commit points to:
+  - a tree
+and contains metadata:
+
+  - author and committer
+  - date
+  - message
+  - parent commit (one or more)
+
+  Sha1 of the commit is a hash of all this information
+
+
+ls -tlr .git/objects # files in here are compressed (binary)
+
+  git cat-file -t -p 980a0 # where p is print the contents t is types
+
+# tree or what it is.. 
