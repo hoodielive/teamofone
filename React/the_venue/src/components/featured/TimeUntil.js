@@ -22,6 +22,30 @@ class TimeUntil extends Component {
               Days
             </div>
           </div>
+          <div className="countdown_item">
+            <div className="countdown_time"> 
+              2
+            </div>
+            <div className="countdown_tag">
+              HS
+            </div>
+          </div>
+          <div className="countdown_item">
+            <div className="countdown_time"> 
+              20
+            </div>
+            <div className="countdown_tag">
+              Min
+            </div>
+          </div>
+          <div className="countdown_item">
+            <div className="countdown_time"> 
+              40
+            </div>
+            <div className="countdown_tag">
+              Sec
+            </div>
+          </div>
         </div>
       </div> 
     ); 
