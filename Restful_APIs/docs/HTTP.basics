@@ -1,0 +1,64 @@
+HTTP Request (message that a client sends to an HTTP server)
+- URL Path (an identifier for a server resource) 
+  /images/background.png 
+    - URL path to a static file 
+  /signup.php
+    - URL path to a server-side script 
+  /oyadaslayer
+    - URL path to a facebook profile 
+
+- Methods (a verb that is used on a resource)
+  - GET, used to download (cacheable) data 
+  - POST, used for submitting form data 
+  - PUT, used for updating files on a server
+  - DELETE, used for deleting files from a server
+
+Open chrome dev tools and click on network tab
+Type a website into the address bar and hit enter
+You should see all the requests being made
+
+
+- Headers (headers are key-value pairs that are sent with requests and responses)
+  - Host: www.soundcloud.com 
+    - Tells the server the hostname that a user entered into the address bar 
+
+  - Content-Length: 12 
+    - Tells the receiver the size of the message's body (in bytes)
+
+  - Content-Type: application/json 
+    - Tells the receiver the format of the data
+
+- Body (the message's actual data) 
+  - user=oya&password=daslayer } URL-encoded form data 
+
+  - JSON-encoded data
+    {
+      "user": "oya", 
+      "password": "daslayer"
+    }
+
+Sample HTTP Request 
+
+POST /index.html HTTP/1.1 } Method,URL Path, and Protocol Version 
+Host: www.somewhereoverthedamnrainbow.com |
+Content-Length: 35                        | Headers 
+
+user=oya&password=slayer } Body 
+
+HTTP Response (a message that an HTTP server sends to a client in response to the request)
+- status code (a 3-digit number that shows the result of the request)
+
+  - 200 OK - used with successful requests 
+  - 301 - Moved Permanently, used when a resource was moced to a new location 
+  - 404 - Client Error, not found 
+  - 500 - Server Error
+
+Sample HTTP Response 
+HTTP/1.1 200 OK } Protocol Version, Status Code, and Reason Phrase 
+Server: nginx/1.4.5
+Date: Thurs, 18 Oct 2018 09:55:12 GMT } Headers 
+Content-Type: text/html; charset=utf-8
+
+<html>
+  } - BODY
+</html>
