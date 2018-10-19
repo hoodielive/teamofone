@@ -1,0 +1,27 @@
+In Rest: 
+
+Collection, a group of elements with the same representation 
+  - endpoint 
+  - HTTP URL pat, ends with the collection's name 
+    - /events
+    - /user-500/messages 
+
+A collection endpoints support the following HTTP methods: 
+  - GET    (List the collection's elements)
+  - POST   (Insert an element to the collection)
+  - PUT    (Replace the entire collection with another collection)
+  - DELETE (Delete the entire collection)
+
+Scenario
+The server has a collection of NOTES
+One note is called Grapes 
+One note is called Apples 
+If you want to get the Grapes note - you would have to send an GET request 
+  - GET /notes 
+  If the item exits, the server will respond with a status number 200 OK 
+  Content-Type: application/json 
+  [ 
+    { "id": "1", "content": "grapes"}
+  ]
+
+
