@@ -23,3 +23,42 @@ const evenums = nums.filter(x => {
   }
 }); 
 
+
+function DelayedGreeter1(name) {
+  this.name = name; 
+}
+
+DelayedGreeter1.prototype.greet = function() { 
+  setTimeout( function cb() { 
+    console.log('Hello ' + this.name); 
+  }, 500); 
+};
+
+const greeter = new DelayedGreeter1('Aeonos');
+greeter.greet(); // will print "hello, undefined" because it needs to be bound .bind(this)
+
+function DelayedGreeter2(name) {
+  this.name = name; 
+}
+
+DelayedGreeter2.prototype.greet = function() {
+  setTimeout((function cb() { 
+    console.log('Hello ' + this.name);     
+  }).bind(this), 500); 
+}; 
+
+const greeter2 = new DelayedGreeter2('Aeonos'); 
+greeter2.greet(); // now will display Aeonos! 
+
+// all this bullshit goes away with arrows lol 
+
+function DelayedGreeter3(name) {
+  this.name = name; 
+}
+
+DelayedGreeter3.prototype.greet = function() {
+  setTimeout( () => console.log('Hello ' + this.name), 500)
+}
+
+const greeter3 = new DelayedGreeter3('Aeon')
+greeter3.greet(); 
