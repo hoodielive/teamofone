@@ -45,3 +45,4 @@ class PersonWithMiddlename extends Person {
 }
 
 new PersonWithMiddlename(); 
+
