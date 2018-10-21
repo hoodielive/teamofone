@@ -30,8 +30,18 @@ class Person2 {
   }; 
 }; 
 
-const person1 = new Person2();
-person1.getFullname('Larry', 'Dragon-Slayer', 900); 
+console.log(Person2.older('Larry', 'kyrah'))
 
-const person2 = new Person2(); 
-person2.getFullname('Brandon', 'Omo-Ogun', 1000); 
+
+class PersonWithMiddlename extends Person {
+  constructor(name, middlename, surname, age) {
+    super(name, surname, age);  
+    this.middlename = middlename; 
+  }
+
+  getFullName() {
+    return this.name + '' + this.middlename + '' + this.surname; 
+  }
+}
+
+new PersonWithMiddlename(); 
