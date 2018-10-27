@@ -20,6 +20,8 @@ function inconsistentRead(filename, callback) {
   }
 }
 
+/** put peice into function **/ 
+
 inconsistentRead()
 /**
  * The function uses the cache variable to store the results of different file read operations. 
