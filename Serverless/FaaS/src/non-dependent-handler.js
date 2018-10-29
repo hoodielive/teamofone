@@ -10,7 +10,7 @@ class Users {
       created_at: Date.now()
     }
 
-    this.db.saveUser(user, function, (err) { 
+    this.db.saveUser(user, function (err) { 
       if (err) {
         callback(err);  
       }
@@ -23,3 +23,13 @@ class Users {
 }
 
 module.exports = Users; 
+
+const db = require('db').connect(); 
+const mailer = require('mailer'); 
+const PUsers = require('users'); 
+
+let users = new Users(db, mailer); 
+
+module.exports.saveUser = (ecent, context, callback) => {
+  users.save(event.email, callback)
+}; 
