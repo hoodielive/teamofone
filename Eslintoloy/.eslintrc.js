@@ -3,14 +3,14 @@ module.exports = {
         "es6": true,
         "node": true
     },
-    "extends": "eslint:recommended",
+    "extends": "airbnb",
     "parserOptions": {
-        "ecmaVersion": 2015
+        "ecmaVersion": 2017
     },
     "rules": {
         "indent": [
             "error",
-            "tab"
+            2, 
         ],
         "linebreak-style": [
             "error",
