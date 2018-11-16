@@ -1,6 +1,4 @@
-#!/usr/bin/env node 
-
-// Master Asynchronous Javascript 
+#!/usr/bin/env node
 
 function doAsyncTask(cb) {
   cb();
