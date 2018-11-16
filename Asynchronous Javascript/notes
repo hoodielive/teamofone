@@ -3,4 +3,4 @@ setInterval
 setTimeout
 setImmediate
 process.nextTick
-readFile
+readFile || readFileSync() -> synchronous
