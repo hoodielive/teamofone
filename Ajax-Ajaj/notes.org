@@ -1,0 +1,12 @@
+#+TITLE: Making Requests with Javascript 
+1. XMLHTTP Request (XHR)
+2. Fetch API
+3. 3rd Party Libraries: jQuery & Axios
+4. Curl/HTTPIE/Wget
+
+** XMLHTTP Requests 
+ #+BEGIN_SRC javascript
+    let XHR = new XMLHttpRequest(); 
+    XHR.open("GET", "https://api.github.com/zen");
+    XHR.send();
+ #+END_SRC
