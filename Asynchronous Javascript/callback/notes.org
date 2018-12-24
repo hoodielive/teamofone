@@ -1,0 +1,18 @@
+#+TITLE: Stack and Heap in Javascript 
+
+** Stack Definition 
+  + An ordered set of stack frames 
+  + Most recently invoked functino is on the top of the stack 
+  + The bottom of the stack is the first function invoked
+  + The stack is processed from top to bottom
+
+** Heap Definition 
+  + An areas in memory where your data is stored
+      #+BEGIN_SRC javascript
+      let obj = {
+        firstname: "King",
+        lastname: "Solomon"
+      };
+      #+END_SRC
+  + The object is created in the heap.
+  + 'obj' is a reference to the object.
