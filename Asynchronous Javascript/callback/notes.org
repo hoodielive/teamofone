@@ -8,11 +8,14 @@
 
 ** Heap Definition 
   + An areas in memory where your data is stored
+
       #+BEGIN_SRC javascript
       let obj = {
         firstname: "King",
         lastname: "Solomon"
       };
+      // new obj not created but a copy is
+      let referenceCopy = obj; 
       #+END_SRC
   + The object is created in the heap.
   + 'obj' is a reference to the object.
