@@ -16,6 +16,7 @@ let arr = [1,2,3,4,5,6];
 
 function callback(curElement, currentIndex, array) {
   // implemented by the caller
+  console.log(curElement, currentIndex, array);
 }
 
 function forEach(array, callback) {
@@ -24,13 +25,13 @@ function forEach(array, callback) {
   }
 };  
 
-forEach(callback); 
+forEach(arr, callback); 
 
 forEach(strings, function(str, index, array) { 
   if (array.length - 1 !== index) {
-    result += str + " "; 
+    results += str + " "; 
   }
   else {
-    result += str + "!!!"
+    results += str + "!!!"
   }
 });
