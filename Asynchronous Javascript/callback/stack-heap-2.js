@@ -10,7 +10,7 @@ function upperCaseWords(sentence)
     {
       words[i] = upperCaseFirst(words[i]); 
     }
-  return words.join(" "); 
+  return console.log(words.join(" "));
 }
 
 upperCaseWords("lowercase words"); 
